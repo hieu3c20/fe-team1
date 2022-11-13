@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import classNames from "classnames/bind";
 import styles from "./Home.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,6 +15,10 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import { faArrowAltCircleLeft } from "@fortawesome/free-regular-svg-icons";
 import { useCart } from "react-use-cart";
+import Ghost from "../../components/Ghost/Ghost";
+import Notification from "../../components/Notification/Notification";
+import NavBar from "../../components/Navbar/Navbar";
+import Menu from "../../components/Menu/Menu";
 
 const cx = classNames.bind(styles);
 const api = "https://berequirement.herokuapp.com/products";
@@ -28,6 +32,7 @@ export async function getResponse() {
     .then((res) => res.json())
     .then((json) => {
       const { data } = json;
+      console.log(data);
 
       data.forEach((ghosts, index) => {
         mainBody = document.querySelector(".main-body");
@@ -143,48 +148,35 @@ export async function getResponse() {
     const transitionBlock = document.querySelector(".notification");
     transitionBlock.style.margin = "0px";
   };
-  
 }
 
-const Home = () => {
-  getResponse();
-  // const { addItem } = useCart()
+const Home = ({setCart, cart}) => {
+  const [ghosts, setGhosts] = useState([]);
+
+  useEffect(() => {
+    (async () => {
+      const res = await fetch(api, {
+        method: "GET",
+        ContentType: "application/json",
+      });
+      const { data } = await res.json();
+      setGhosts(data);
+    })();
+  }, []);
+
   return (
     <>
       <div className="container">
-        <div className={cx("notification")}>
-          <FontAwesomeIcon
-            className={cx("notification-icon")}
-            icon={faCheckCircle}
-          />
-          <div className={cx("notification-title")}>
-            Item has added to your Shopping Cart
-          </div>
-        </div>
-        <div className={cx("navbar")}>
-          <div className={cx("menu-navbar")}>
-            <FontAwesomeIcon className={cx("font-icon")} icon={faBars} />
-          </div>
-          <div className={cx("icon-navbar")}>
-            <FontAwesomeIcon className={cx("font-icon")} icon={faLinkedin} />
-            <FontAwesomeIcon className={cx("font-icon")} icon={faFacebook} />
-            <FontAwesomeIcon className={cx("font-icon")} icon={faInstagram} />
-          </div>
-        </div>
-
+        
+        <NavBar />
         <div className={cx("main")}>
-          <div className={cx("main-header")}>
-            <div className={cx("main-logo")}>LOGO</div>
-            <div className={cx("main-navigation")}>
-              <div>Pumpkin</div>
-              <div>Bat</div>
-              <div>Customize</div>
-            </div>
-            <div className={cx("cart")}>
-              <FontAwesomeIcon icon={faCartShopping} />
-            </div>
-          </div>
+          <Menu cart={cart} />
           <div className={cx("main-body")}>
+            <div className="container-gosh">
+              {ghosts.map((ghost) => (
+                <Ghost setCart={setCart} ghost={ghost} />
+              ))}
+            </div>
             <FontAwesomeIcon
               className={cx("main-btn-left")}
               icon={faArrowAltCircleLeft}

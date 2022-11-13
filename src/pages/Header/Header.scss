@@ -1,0 +1,22 @@
+.main {
+    margin-left: 60px;
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .main-header {
+    display: flex;
+  }
+  
+  .main-navigation {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    margin: 0 auto 0 10%;
+  }
+  
+  .main-body {
+    overflow: hidden;
+    display: flex;
+  }
+  
