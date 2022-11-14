@@ -1,14 +1,12 @@
 .navbar {
   padding: 50px;
-  position: fixed;
-  top: 0;
-  bottom: 0;
   width: 50px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
   border-right: 1px solid #000;
+  height: 100%;
 }
 
 .menu-navbar {
@@ -29,4 +27,3 @@
   font-size: 30px;
   padding-bottom: 5px;
 }
-

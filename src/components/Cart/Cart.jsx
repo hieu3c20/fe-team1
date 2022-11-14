@@ -15,6 +15,7 @@ const Cart = ({ cart }) => {
   const [step, setStep] = useState(0);
   const handleIncrea = () => {
     setStep((prev) => prev + 1);
+    setIsOpenCheckOut(false);
   };
   const handleDecrea = () => setStep((prev) => prev - 1);
   const handleCloseCheckOut = () => {
@@ -23,19 +24,22 @@ const Cart = ({ cart }) => {
   };
   return (
     <div className={"cart"}>
-      <FontAwesomeIcon
-        icon={faCartShopping}
-        onClick={() => {
-          setIsOpenCheckOut((prev) => !prev);
-        }}
-        className='cart-icon'
-      />
-      {cart.length > 0 && <div className="size-cart">{cart.length}</div>}
+      <div className="icon-cart">
+        <FontAwesomeIcon
+          icon={faCartShopping}
+          onClick={() => {
+            setIsOpenCheckOut((prev) => !prev);
+          }}
+          className="cart-icon"
+        />
+        {cart.length > 0 && <div className="size-cart">{cart.length}</div>}
+      </div>
       {isOpenCheckOut && <MiniCart cart={cart} handleIncrea={handleIncrea} />}
       {step == 1 && (
         <Summary
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
+          cart={cart}
         />
       )}
 
@@ -52,12 +56,12 @@ const Cart = ({ cart }) => {
           onClose={() => {
             setStep(0);
             setIsOpenCheckOut(false);
-            toast.success('Order thanh cong' , {
+            toast.success("Order successfully", {
               position: "top-center",
-              autoClose: 2000,
+              autoClose: 1000,
               hideProgressBar: true,
               closeOnClick: true,
-              pauseOnHover: false,
+              pauseOnHover: true,
               draggable: false,
               progress: undefined,
               theme: "light",

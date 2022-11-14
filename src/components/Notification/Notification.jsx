@@ -7,8 +7,7 @@ const Notification = () => {
   return (
     <div className={"notification"}>
       <FontAwesomeIcon className={"notification-icon"} icon={faCheckCircle} />
-      <div className={"notification-title"}>
-      </div>
+      <div className={"notification-title"}></div>
     </div>
   );
 };

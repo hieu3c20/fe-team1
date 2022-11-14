@@ -1,5 +1,4 @@
 .container-gosh {
-  // width: 1400px;
   display: flex;
   position: relative;
   transition: transform 0.25s linear;
@@ -24,14 +23,13 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  // padding-left: 20%;
 }
 
 // MAIN-BODY-TEXT (LEFT-HANDSIDE)
 .main-body-title {
   font-size: 30px;
   font-weight: 900;
-  color: var(--text-color);
+  color: black;
   padding-bottom: 5px;
 }
 
@@ -41,20 +39,17 @@
 }
 
 .main-body-ghost-type {
-  color: var(--text-color);
+  color: black;
 }
 
 .main-body-btn {
   color: var(--white);
   font-size: 20px;
-  background-color: var(--text-color);
-  padding: 10px;
+  background-color: black;
+  padding: 20px;
   border-radius: 10px;
   margin-top: 30px;
   cursor: pointer;
 }
 
 // MAIN-BODY-IMG (RIGHT-HANDSIDE)
-.container-img {
-  // padding-right: 10%;
-}

@@ -1,0 +1,96 @@
+.summary-form {
+  border-radius: 10px;
+  width: 400px;
+  background-color: white;
+  z-index: 1000;
+  padding: 30px;
+  box-shadow: rgba(255, 255, 255, 0.1) 0px 1px 1px 0px inset,
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.summary-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 10px;
+}
+
+.summary-header div {
+  font-weight: 600;
+}
+
+.summary-body {
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  margin: 25px 10px;
+}
+
+.summary-img {
+  width: 40px;
+  height: 40px;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 255, 255, 0.9);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1001;
+}
+
+.summary-footer {
+  margin: 0 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.summary-name {
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.summary-code {
+  font-weight: 400;
+  font-size: 11px;
+}
+
+.summary-price {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.summary-count span {
+  font-weight: 600;
+  font-size: 12px;
+}
+
+.summary-total {
+  font-weight: 600;
+}
+
+.summary-count button {
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 13px;
+  padding: 4px;
+}
+
+.summary-btn {
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: #f25f0c;
+  padding: 10px;
+}
