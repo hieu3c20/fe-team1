@@ -27,7 +27,7 @@ const Ghost = ({ ghost, setCart }) => {
                   theme: "light",
                 });
               }
-              return !!isExit ? prev : [...prev, ghost];
+              return !!isExit ? prev : [...prev, {...ghost , quantity: 1}];
             });
           }}
           className="main-body-btn buy-btn"

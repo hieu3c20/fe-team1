@@ -9,7 +9,7 @@ import Summary from "../Form/Sumary";
 import MiniCart from "../MiniCart/MiniCart";
 import "./cart.scss";
 
-const Cart = ({ cart }) => {
+const Cart = ({ cart, setCart }) => {
   const [isOpenCheckOut, setIsOpenCheckOut] = useState(false);
   const [closeCheckOut, setCloseCheckOut] = useState(false);
   const [step, setStep] = useState(0);
@@ -34,20 +34,30 @@ const Cart = ({ cart }) => {
         />
         {cart.length > 0 && <div className="size-cart">{cart.length}</div>}
       </div>
-      {isOpenCheckOut && <MiniCart cart={cart} handleIncrea={handleIncrea} />}
+      {isOpenCheckOut && (
+        <MiniCart
+          cart={cart}
+          handleIncrea={handleIncrea}
+          onClose={setIsOpenCheckOut}
+          setCart= {setCart}
+        />
+      )}
       {step == 1 && (
         <Summary
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
           cart={cart}
+          setCart= {setCart}
         />
       )}
 
       {step == 2 && (
         <GetInfo
+          cart={cart}
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
           handleDecrea={handleDecrea}
+          setCart= {setCart}
         />
       )}
 
@@ -72,7 +82,10 @@ const Cart = ({ cart }) => {
 
       {closeCheckOut && (
         <OrderFail
-          onTryAgain={handleIncrea}
+          onTryAgain={() => {
+            handleIncrea();
+            setCloseCheckOut(false);
+          }}
           onClose={() => {
             setCloseCheckOut(false);
           }}

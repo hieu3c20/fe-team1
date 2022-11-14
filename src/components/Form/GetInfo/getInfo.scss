@@ -31,6 +31,10 @@
   margin: 20px 0;
 }
 
+.shipping-method {
+  width: 60%;
+}
+
 .shipping-detail {
   display: flex;
   justify-content: space-between;
@@ -52,9 +56,29 @@
   border-radius: 4px;
 }
 
+.shipping-detail-form .shipping-method-detail input {
+  margin-right: 8px;
+  outline: none;
+}
+
+.shipping-detail-form .shipping-method-detail label {
+  align-items: center;
+  display: flex;
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
 .shipping-info {
   display: flex;
   flex-direction: column;
+  width: 60%;
+  margin-right: 20px;
+}
+
+.shipping-detail-form .shipping-info label {
+  font-size: 16px;
+  font-weight: 400;
+  margin-bottom: 6px;
 }
 
 .shipping-info input {
@@ -75,6 +99,15 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+}
+
+.shipping-total-calculation {
+  font-size: 13px;
+  font-weight: 400;
+}
+
+.shipping-total-calculation div {
+  margin: 13px 0;
 }
 
 .shipping-footer-btn {

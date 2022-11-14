@@ -4,9 +4,11 @@ import { useState } from "react";
 import Notification from "./components/Notification/Notification";
 import NavBar from "./components/Navbar/Navbar";
 import Menu from "./components/Menu/Menu";
-import './App.scss'
+import "./App.scss";
+import Pumpkin from "./pages/Pumpkin/Pumpkin";
 function App() {
   const [cart, setCart] = useState([]);
+
   return (
     <div className="App">
       <Notification cart={cart} />
@@ -15,9 +17,10 @@ function App() {
           <NavBar></NavBar>
         </div>
         <div className="right">
-          <Menu cart={cart} />
+          <Menu cart={cart} setCart={setCart} />
           <Routes>
             <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
+            <Route path="/pumpkin" element={<Pumpkin setCart={setCart} />} />
           </Routes>
         </div>
       </div>

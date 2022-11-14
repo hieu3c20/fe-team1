@@ -1,9 +1,9 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import "./Menu.scss";
 
-const Menu = ({ cart }) => {
+const Menu = ({ cart , setCart}) => {
   const links = [
     {
       name: "Ghost",
@@ -31,15 +31,15 @@ const Menu = ({ cart }) => {
         </div>
         <div className={"main-navigation"}>
           {links.map((link, i) => (
-            <div className="link">
-              <Link to={link.path} className={`${i === 0 ? "active" : ""}`}>
+            <div className="link" key={link.name}>
+              <NavLink to={link.path}>
                 {link.name}
-              </Link>
+              </NavLink>
             </div>
           ))}
         </div>
       </div>
-      <Cart cart={cart} />
+      <Cart cart={cart} setCart={setCart} />
     </div>
   );
 };

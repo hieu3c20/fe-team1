@@ -32,23 +32,19 @@ const Home = ({ setCart, cart }) => {
   };
 
   return (
-    <>
-      <div className="container-home">
-        <div className={cx("main")}>
-          <div className={cx("main-body")}>
-            <Slider {...settings}>
-              <div className="container-gosh">
-                {ghosts.map((ghost) => (
-                  <Ghost setCart={setCart} ghost={ghost} />
-                ))}
-              </div>
-            </Slider>
-            <div className={cx("slider-ghost")}></div>
-            <div className={cx("container-gosh")}></div>
-          </div>
+    <div className="container-home">
+      <div className={cx("main")}>
+        <div className={cx("main-body")}>
+          <Slider {...settings}>
+            <div className="container-gosh">
+              {ghosts.map((ghost) => (
+                <Ghost key={ghost.code} setCart={setCart} ghost={ghost} />
+              ))}
+            </div>
+          </Slider>
         </div>
       </div>
-    </>
+    </div>
   );
 };
 
