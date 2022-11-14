@@ -1,11 +1,37 @@
+.cart {
+  position: relative;
+  padding-right: 40px;
+  padding-top: 5px;
+}
+
+.cart-icon {
+  font-size: 30px;
+}
+
 .size-cart {
     position: absolute;
-    width: 30px;
-    height: 30px;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    font-size: 10px;
     background-color: red;
-    color: black;
+    color: var(--white);
     border-radius: 50%;
-    right: 15px;
-    top: 15px;
+    right: 0;
+    top: 0;
   }
   
+.mini-cart-body {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.mini-cart-btn {
+  border-radius: 10px;
+  padding: 10px;
+  color: var(--white);
+  background-color: var(--background-btn);
+  width: 100%;
+  cursor: pointer;
+}

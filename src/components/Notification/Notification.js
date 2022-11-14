@@ -8,7 +8,6 @@ const Notification = () => {
     <div className={"notification"}>
       <FontAwesomeIcon className={"notification-icon"} icon={faCheckCircle} />
       <div className={"notification-title"}>
-        Item has added to your Shopping Cart
       </div>
     </div>
   );

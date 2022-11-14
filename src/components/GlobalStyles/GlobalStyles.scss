@@ -3,8 +3,9 @@
 :root {
     --primary-color: rgb(219, 202, 202);
     --text-color: rgba(59, 21, 145, 0.8);
-    --white: #fff;
-    --black: #000;
+    --white: #ffff;
+    --black: #0000;
+    --background-btn: rgb(220, 166, 40);
 }
 
 * {
@@ -36,6 +37,6 @@ input,
 }
 
 a[href] {
-    color: var(--text-color);
+    color: black;
     text-decoration: none;
 }

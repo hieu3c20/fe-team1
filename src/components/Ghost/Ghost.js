@@ -16,16 +16,16 @@ const Ghost = ({ ghost, setCart }) => {
             setCart((prev) => {
               const isExit = prev.find((item) => item.code === ghost.code);
               if (!isExit) {
-                toast('', {
+                toast("Item has added to your Shopping Cart", {
                   position: "top-center",
                   autoClose: 2000,
-                  hideProgressBar: false,
+                  hideProgressBar: true,
                   closeOnClick: true,
-                  pauseOnHover: true,
-                  draggable: true,
+                  pauseOnHover: false,
+                  draggable: false,
                   progress: undefined,
                   theme: "light",
-                  });
+                });
               }
               return !!isExit ? prev : [...prev, ghost];
             });

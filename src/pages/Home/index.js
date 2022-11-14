@@ -150,7 +150,7 @@ export async function getResponse() {
   };
 }
 
-const Home = ({setCart, cart}) => {
+const Home = ({ setCart, cart }) => {
   const [ghosts, setGhosts] = useState([]);
 
   useEffect(() => {
@@ -167,25 +167,10 @@ const Home = ({setCart, cart}) => {
   return (
     <>
       <div className="container">
-        
-        <NavBar />
+        {/* <NavBar /> */}
         <div className={cx("main")}>
-          <Menu cart={cart} />
-          <div className={cx("main-body")}>
-            <div className="container-gosh">
-              {ghosts.map((ghost) => (
-                <Ghost setCart={setCart} ghost={ghost} />
-              ))}
-            </div>
-            <FontAwesomeIcon
-              className={cx("main-btn-left")}
-              icon={faArrowAltCircleLeft}
-            />
-            <FontAwesomeIcon
-              className={cx("main-btn-right")}
-              icon={faArrowAltCircleRight}
-            />
-            <div className={cx("slider-dots")}>
+          {/* <Menu cart={cart} /> */}
+          <div className={cx("slider-dots")}>
               <div
                 className={cx("slider-item active-represent")}
                 data-index="0"
@@ -193,9 +178,23 @@ const Home = ({setCart, cart}) => {
               <div className={cx("slider-item")} data-index="1"></div>
               <div className={cx("slider-item")} data-index="2"></div>
             </div>
-            <div className={cx("slider-ghost")}>
-              <div className={cx("container-gosh")}></div>
+          <div className={cx("main-body")}>
+            <div className="container-gosh">
+              {ghosts.map((ghost) => (
+                <Ghost setCart={setCart} ghost={ghost} />
+              ))}
             </div>
+            {/* <FontAwesomeIcon
+              className={cx("main-btn-left")}
+              icon={faArrowAltCircleLeft}
+            />
+            <FontAwesomeIcon
+              className={cx("main-btn-right")}
+              icon={faArrowAltCircleRight}
+            /> */}
+
+            <div className={cx("slider-ghost")}></div>
+            <div className={cx("container-gosh")}></div>
           </div>
         </div>
       </div>

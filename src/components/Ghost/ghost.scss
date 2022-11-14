@@ -1,56 +1,60 @@
 .container-gosh {
-    width: 1400px;
-    display: flex;
-    position: relative;
-    transition: transform 0.25s linear;
-    height: 100%;
-  }
-  
-  .main-gosh {
-    display: flex;
-    justify-content: space-between;
-    width: 1200px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    flex-basis: 100%;
-  }
-  
-  .ghostDetail {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    // padding-left: 20%;
-  }
-  
-  // MAIN-BODY-TEXT (LEFT-HANDSIDE)
-  .main-body-title {
-    font-size: 30px;
-    font-weight: 900;
-    color: var(--text-color);
-    padding-bottom: 5px;
-  }
-  
-  .main-body-code {
-    font-size: 10px;
-    color: rgba(57, 53, 53, 0.8);
-  }
-  
-  .main-body-ghost-type {
-    color: var(--text-color);
-  }
-  
-  .main-body-btn {
-    color: var(--white);
-    font-size: 20px;
-    background-color: var(--text-color);
-    padding: 10px;
-    border-radius: 10px;
-    margin-top: 30px;
-    cursor: pointer;
-  }
-  
-  // MAIN-BODY-IMG (RIGHT-HANDSIDE)
-  .container-img {
-    padding-right: 10%;
-  }
-  
+  // width: 1400px;
+  display: flex;
+  position: relative;
+  transition: transform 0.25s linear;
+  height: 100%;
+}
+
+.main-body {
+  padding-left: 100px;
+  margin-left: 30px;
+}
+
+.main-gosh {
+  display: flex;
+  justify-content: space-between;
+  width: 1200px;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 100%;
+}
+
+.ghostDetail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // padding-left: 20%;
+}
+
+// MAIN-BODY-TEXT (LEFT-HANDSIDE)
+.main-body-title {
+  font-size: 30px;
+  font-weight: 900;
+  color: var(--text-color);
+  padding-bottom: 5px;
+}
+
+.main-body-code {
+  font-size: 10px;
+  color: rgba(57, 53, 53, 0.8);
+}
+
+.main-body-ghost-type {
+  color: var(--text-color);
+}
+
+.main-body-btn {
+  color: var(--white);
+  font-size: 20px;
+  background-color: var(--text-color);
+  padding: 10px;
+  border-radius: 10px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+// MAIN-BODY-IMG (RIGHT-HANDSIDE)
+.container-img {
+  // padding-right: 10%;
+}

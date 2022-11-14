@@ -27,7 +27,7 @@ const GhostPage = (props) => {
       </div>
       <div className={cx("slider-ghost")}>
         <div className={cx("container-gosh")}>
-          <div className={cx("main-gosh")}>
+          <div className={cx("main-pumkin")}>
             <div className={cx("ghostDetail")}>
               <div className={cx("main-body-title")}>pumpkin</div>
               <div className={cx("main-body-title")}>{product.name}</div>
