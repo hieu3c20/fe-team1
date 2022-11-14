@@ -11,7 +11,7 @@ const data = {
     },
     {
       id: 2,
-      name: "Pumpppp",
+      name: "Heee",
       code: "PUMPKIN202-2",
       type: "Dino Pumpkin",
       price: "100",
@@ -20,7 +20,7 @@ const data = {
     },
     {
       id: 3,
-      name: "PumppK",
+      name: "Pu",
       code: "PUMPKIN202-3",
       type: "Dino Pumpkin",
       price: "150",
