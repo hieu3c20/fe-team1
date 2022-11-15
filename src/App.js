@@ -1,7 +1,6 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home/index";
 import { useState } from "react";
-import Notification from "./components/Notification/Notification";
 import NavBar from "./components/Navbar/Navbar";
 import Menu from "./components/Menu/Menu";
 import "./App.scss";
@@ -11,7 +10,6 @@ function App() {
 
   return (
     <div className="App">
-      <Notification cart={cart} />
       <div className="container">
         <div className="left">
           <NavBar></NavBar>

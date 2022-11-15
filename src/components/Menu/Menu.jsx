@@ -23,13 +23,13 @@ const Menu = ({ cart , setCart}) => {
     },
   ];
   return (
-    <div className={"main-header"}>
+    <div className="main-header">
       <div className="left-menu">
         <div className="main-logo">
-          <div className={"main-logo-img"}></div>
+          <div className="main-logo-img"></div>
           <div className="main-logo-text">Dino Ghost</div>
         </div>
-        <div className={"main-navigation"}>
+        <div className="main-navigation">
           {links.map((link, i) => (
             <div className="link" key={link.name}>
               <NavLink to={link.path}>
