@@ -16,11 +16,12 @@
 }
 
 .container-dots {
-  position: absolute;
-  bottom: 10px;
-  left: 50%;
+  position: fixed;
+  bottom: 60px;
+  left: 88%;
   transform: translateX(-50%);
   display: flex;
+  z-index: 3;
 }
 
 .prev {
@@ -37,6 +38,7 @@
 .container-dots .dot {
   width: 20px;
   height: 20px;
+  cursor: pointer;
   border-radius: 50%;
   color: red;
   border: 3px solid #f1f1f1;
@@ -44,6 +46,6 @@
   background-color: #bc4343;
 }
 
-.dot.active {
+.dot.active-slider {
   background: rgb(32, 32, 32);
 }

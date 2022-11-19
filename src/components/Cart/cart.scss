@@ -5,7 +5,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
 
 .icon-cart {
@@ -40,12 +39,11 @@
   top: 0;
 }
 
-
 .mini-cart-btn {
   border-radius: 10px;
   padding: 10px;
-  color: var(--white);
-  background-color: var(--background-btn);
+  color: white;
+  background-color: #f25f0c;
   width: 100%;
   cursor: pointer;
 }

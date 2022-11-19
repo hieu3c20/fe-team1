@@ -1,42 +1,42 @@
-@import 'normalize.css';
+@import "normalize.css";
 
 :root {
-    --primary-color: rgb(219, 202, 202);
-    --text-color: rgba(59, 21, 145, 0.8);
-    --white: #ffff;
-    --black: #0000;
-    --background-btn: rgb(220, 166, 40);
+  --primary-color: rgb(219, 202, 202);
+  --text-color: rgba(59, 21, 145, 0.8);
+  --white: #ffff;
+  --black: #0000;
+  --background-btn: rgb(220, 166, 40);
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
+  font-size: 62.5%;
 }
 
 body {
-    font-family: 'ProximaNova', sans-serif;
-    font-size: 1.6rem;
-    line-height: 1.5;
-    text-rendering: optimizespeed;
+  font-family: "ProximaNova", sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.5;
+  text-rendering: optimizespeed;
 }
 
 .App {
-    height: 100%;
+  height: 100%;
 }
 
 button,
 input,
 [tabindex] {
-    outline: none;
-    border: none;
+  outline: none;
+  border: none;
 }
 
 a[href] {
-    color: black;
-    text-decoration: none;
+  color: black;
+  text-decoration: none;
 }

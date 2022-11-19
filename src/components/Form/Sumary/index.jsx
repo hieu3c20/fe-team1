@@ -31,7 +31,7 @@ const Summary = ({ handleCloseCheckOut, handleIncrea, cart, setCart }) => {
   };
 
   const removeProduct = (item) => {
-    if(cart.length === 1) handleCloseCheckOut()
+    if (cart.length === 1) handleCloseCheckOut();
     setCart((prev) => prev.filter((data) => data.code !== item.code));
   };
   return (

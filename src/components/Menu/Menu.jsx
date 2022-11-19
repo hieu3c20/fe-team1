@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
 import "./Menu.scss";
 
-const Menu = ({ cart , setCart}) => {
+const Menu = ({ cart, setCart }) => {
   const links = [
     {
       name: "Ghost",
@@ -32,9 +32,7 @@ const Menu = ({ cart , setCart}) => {
         <div className="main-navigation">
           {links.map((link, i) => (
             <div className="link" key={link.name}>
-              <NavLink to={link.path}>
-                {link.name}
-              </NavLink>
+              <NavLink to={link.path}>{link.name}</NavLink>
             </div>
           ))}
         </div>

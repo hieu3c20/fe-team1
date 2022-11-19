@@ -5,18 +5,15 @@ import GlobalStyles from "./components/GlobalStyles/index";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { BrowserRouter as Router } from "react-router-dom";
-import "slick-carousel/slick/slick.css"; 
-import "slick-carousel/slick/slick-theme.css";
-
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
-  <React.StrictMode>
+  // <React.StrictMode>
     <Router>
       <GlobalStyles>
         <App />
         <ToastContainer />
       </GlobalStyles>
     </Router>
-  </React.StrictMode>
+  // </React.StrictMode> 
 );

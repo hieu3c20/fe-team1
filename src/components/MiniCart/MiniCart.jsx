@@ -1,4 +1,4 @@
-import { faClose, faTrash } from "@fortawesome/free-solid-svg-icons";
+import { faClose, faTrash, faWarning } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Item from "../Item/Item";
@@ -24,9 +24,9 @@ const MiniCart = ({ cart, handleIncrea, onClose, setCart }) => {
             Check out
           </button>
         ) : (
-          <div className="">
-            <p>empty</p>
-            <button onClick={handleCloseCart}>Back go to shooping</button>
+          <div className="mini-cart-empty-case">
+            <p className="mini-cart-empty-case-title"><FontAwesomeIcon icon={faWarning} /> Your shopping cart is Empty</p>
+            <button className="mini-cart-empty-case-btn" onClick={handleCloseCart}>Back go to shooping</button>
           </div>
         )}
       </div>

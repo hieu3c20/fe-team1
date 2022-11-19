@@ -39,7 +39,7 @@ const Cart = ({ cart, setCart }) => {
           cart={cart}
           handleIncrea={handleIncrea}
           onClose={setIsOpenCheckOut}
-          setCart= {setCart}
+          setCart={setCart}
         />
       )}
       {step == 1 && (
@@ -47,7 +47,7 @@ const Cart = ({ cart, setCart }) => {
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
           cart={cart}
-          setCart= {setCart}
+          setCart={setCart}
         />
       )}
 
@@ -57,7 +57,7 @@ const Cart = ({ cart, setCart }) => {
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
           handleDecrea={handleDecrea}
-          setCart= {setCart}
+          setCart={setCart}
         />
       )}
 
