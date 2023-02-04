@@ -1,7 +1,7 @@
 import { faClose, faTrash } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
-import summary from "./summary.scss";
+import "./summary.scss";
 
 const Summary = ({ handleCloseCheckOut, handleIncrea, cart, setCart }) => {
   const calTotal = () =>
@@ -38,13 +38,23 @@ const Summary = ({ handleCloseCheckOut, handleIncrea, cart, setCart }) => {
     <div className="overlay">
       <div className="summary-form">
         <div className="summary-header">
-          <div>Shopping Cart {cart.length}</div>
+          <div>
+            Shopping Cart -   
+            {cart.length === 1
+              ? `   ${cart.length} product`
+              : `   ${cart.length} products`}
+        
+          </div>
           <FontAwesomeIcon icon={faClose} onClick={handleCloseCheckOut} />
         </div>
         {cart.map((item) => {
           return (
             <div className="summary-body" key={item.code}>
-              <img src={item.image} className="summary-img"></img>
+              <img
+                src={item.image}
+                className="summary-img"
+                alt={item.name}
+              ></img>
 
               <div className="summary-description">
                 <div className="summary-name">{item.name}</div>

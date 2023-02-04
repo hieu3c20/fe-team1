@@ -1,8 +1,7 @@
 import { faClose } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React, { useState } from "react";
-import getInfo from "./getInfo.scss";
-
+import './getInfo.scss'
 const GetInfo = ({
   handleCloseCheckOut,
   handleIncrea,
@@ -22,11 +21,12 @@ const GetInfo = ({
   const handleChangeInfo = (e) => {
     if (errors.includes(e.target.name)) {
       setErrors((prev) => {
-        return prev.filter((item) => item != e.target.name);
+        return prev.filter((item) => item !== e.target.name);
       });
     }
     setInfo((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
+  
   const calPrice = () =>
     cart.reduce((acc, item) => {
       return acc + Number(item.price) * item.quantity;
@@ -63,7 +63,7 @@ const GetInfo = ({
 
   const handleSubmit = () => {
     const infoErrors = checkInfo();
-    if (infoErrors.length == 0 && method) {
+    if (infoErrors.length === 0 && method) {
       handleIncrea();
       setCart([]);
     } else {
@@ -135,7 +135,7 @@ const GetInfo = ({
                         setMethod(method);
                         if (errors.includes("method")) {
                           setErrors((prev) => {
-                            return prev.filter((item) => item != "method");
+                            return prev.filter((item) => item !== "method");
                           });
                         }
                       }}

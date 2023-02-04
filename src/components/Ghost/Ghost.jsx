@@ -35,7 +35,7 @@ const Ghost = ({ ghost, setCart }) => {
           className="main-body-btn buy-btn"
           code = {ghost.code}
         >
-          Buy Now
+          Add To Cart
         </button>
       </div>
       <div className="container-img">

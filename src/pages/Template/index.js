@@ -1,7 +1,7 @@
 import React from 'react'
 import Home from '../Home'
 
-const Template = ({ ...data}) => {
+const Template = ({ ...data }) => {
   return (
     <Home {...data}></Home>
   )

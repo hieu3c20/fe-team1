@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./Home.scss";
 import Ghost from "../../components/Ghost/Ghost";
 import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";  
+import "slick-carousel/slick/slick-theme.css";
 
 const Home = ({ products, setCart }) => {
   const [slideIndex, setSlideIndex] = useState(1);
@@ -14,18 +14,6 @@ const Home = ({ products, setCart }) => {
       setSlideIndex(1);
     }
   };
-
-  // const prevSlide = () => {
-  //   if (slideIndex !== 1) {
-  //     setSlideIndex(slideIndex - 1);
-  //   } else if (slideIndex === 1) {
-  //     setSlideIndex(3);
-  //   }
-  // };
-
-  // const moveDot = (index) => {
-  //   setSlideIndex(index);
-  // };
 
   const dots = [1, 2, 3];
 

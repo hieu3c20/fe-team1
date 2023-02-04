@@ -14,7 +14,6 @@
   opacity: 0;
   transition: opacity ease-in-out 0.4s;
   z-index: 1;
-
 }
 
 .active-anim {
@@ -41,8 +40,8 @@
 
 .container-dots {
   position: fixed;
-  bottom: 100px;
-  left: 88%;
+  bottom: 170px;
+  left: 75%;
   transform: translateX(-50%);
   display: flex;
   z-index: 3;
@@ -65,7 +64,7 @@
   cursor: pointer;
   border-radius: 50%;
   border: 3px solid #f1f1f1;
-  margin: 0 5px;
+  margin: 0 10px;
   background-color: #333;
 }
 

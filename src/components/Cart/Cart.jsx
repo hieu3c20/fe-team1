@@ -13,6 +13,7 @@ const Cart = ({ cart, setCart }) => {
   const [isOpenCheckOut, setIsOpenCheckOut] = useState(false);
   const [closeCheckOut, setCloseCheckOut] = useState(false);
   const [step, setStep] = useState(0);
+  
   const handleIncrea = () => {
     setStep((prev) => prev + 1);
     setIsOpenCheckOut(false);
@@ -42,7 +43,7 @@ const Cart = ({ cart, setCart }) => {
           setCart={setCart}
         />
       )}
-      {step == 1 && (
+      {step === 1 && (
         <Summary
           handleCloseCheckOut={handleCloseCheckOut}
           handleIncrea={handleIncrea}
@@ -51,7 +52,7 @@ const Cart = ({ cart, setCart }) => {
         />
       )}
 
-      {step == 2 && (
+      {step === 2 && (
         <GetInfo
           cart={cart}
           handleCloseCheckOut={handleCloseCheckOut}
@@ -61,7 +62,7 @@ const Cart = ({ cart, setCart }) => {
         />
       )}
 
-      {step == 3 && (
+      {step === 3 && (
         <OrderSucess
           onClose={() => {
             setStep(0);

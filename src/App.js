@@ -12,7 +12,7 @@ function App() {
   const [cart, setCart] = useState([]);
 
   useEffect(() => {
-    (async () => {
+    (async () => {  
       const res = await fetch(api, {
         method: "GET",
         ContentType: "application/json",
