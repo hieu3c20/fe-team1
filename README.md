@@ -1,7 +1,7 @@
 # Halloween Shop
 
-Feature: \
-    Taking data from an api and populating the data to interface\
-    Adding an item to cart \
-    Checking the added item, increasing, decreasing item\
-    Taking data from from and sending to the api\
+Feature: <br/>
+    Taking data from an api and populating the data to interface<br/>
+    Adding an item to cart <br/>
+    Checking the added item, increasing, decreasing item<br/>
+    Taking data from from and sending to the api<br/>
