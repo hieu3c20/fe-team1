@@ -6,16 +6,16 @@ import "./Menu.scss";
 const Menu = ({ cart, setCart }) => {
   const links = [
     {
-      name: "Ghost",
-      path: "/",
-    },
-    {
       name: "Pumpkin",
       path: "/pumpkin",
     },
     {
       name: "Bat",
       path: "/bat",
+    },
+    {
+      name: "Ghost",
+      path: "/",
     },
     {
       name: "Customize",
